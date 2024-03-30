@@ -1,0 +1,92 @@
+- Отримання всіх даних:
+  GET -> http://localhost:8080/api/v1/employees
+
+
+- Створення даних:
+  POST -> http://localhost:8080/api/v1/employees
+  1.
+        {
+            "name": "Edward",
+            "surname": "Cullen",
+            "position": "Head of Surgery Department",
+            "phone": "(555) 678-0123"
+        }
+
+  2.
+        {
+            "name": "Bella",
+            "surname": "Swan",
+            "position": "Nurse",
+            "phone": "(555) 987-6543"
+        }
+
+  3.
+        {
+            "name": "Jacob",
+            "surname": "Black",
+            "position": "Emergency Medical Technician",
+            "phone": "(555) 555-5555"
+        }
+
+  4.
+        {
+            "name": "Rosalie",
+            "surname": "Hale",
+            "position": "Radiologist",
+            "phone": "(555) 876-5432"
+        }
+
+  5.
+        {
+            "name": "Carlisle",
+            "surname": "Cullen",
+            "position": "Chief Medical Officer",
+            "phone": "(555) 123-4567"
+        }
+
+  6.
+        {
+            "name": "Esme",
+            "surname": "Evenson",
+            "position": "Hospital Administrator",
+            "phone": "(555) 654-3210"
+        }
+
+
+- Отримання даних за ID:
+  GET -> http://localhost:8080/api/v1/employees/2
+
+
+
+- Оновлення даних за ID:
+  PUT -> http://localhost:8080/api/v1/employees/6
+        {
+	        "surname": "Cullen",
+	        "phone": "(555) 123-4568"
+        }
+
+  PUT -> http://localhost:8080/api/v1/employees/4
+        {
+	        "position": "Head of Radiology Department"
+        }
+
+
+- Отримання даних за name:
+  Наявне:
+  GET -> http://localhost:8080/api/v1/employees/name/Esme
+
+  Відсутнє:
+  GET -> http://localhost:8080/api/v1/employees/name/John
+
+
+- Отримання даних за surname:
+  Наявне:
+  GET -> http://localhost:8080/api/v1/employees/surname/Cullen
+
+  Відсутнє:
+  GET -> http://localhost:8080/api/v1/employees/surname/Smith
+
+
+- Видалення даних за ID:
+  DELETE -> http://localhost:8080/api/v1/employees/3
+
